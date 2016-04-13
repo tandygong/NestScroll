@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.tandygong.gzx.nestscroll.views.PullToRefreshLayout
+        android:id="@+id/ptf_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.tandygong.gzx.nestscroll.views.CustomerNestedScrollView
+            android:id="@+id/nestScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_item_whole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_rank"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_black_radius_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:src="@mipmap/school_ranking" />
+
+                            <TextView
+                                android:id="@+id/tv_rank"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:includeFontPadding="false"
+                                android:text="2"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:includeFontPadding="false"
+                                android:text="th"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_location"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_black_radius_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:src="@mipmap/school_location" />
+
+                            <TextView
+                                android:id="@+id/tv_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_weather"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_black_radius_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:src="@mipmap/school_weather" />
+
+                            <TextView
+                                android:id="@+id/tv_weather"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:includeFontPadding="false"
+                                android:text="22 ºC"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_total_data"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_black_radius_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:src="@mipmap/school_statistics" />
+
+                            <TextView
+                                android:id="@+id/tv_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="10000"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_real_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#f2f2f2"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text=" "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <com.tandygong.gzx.nestscroll.views.ProgressBarWebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.tandygong.gzx.nestscroll.views.CustomerNestedScrollView>
+
+        <include layout="@layout/load_more" />
+
+    </com.tandygong.gzx.nestscroll.views.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_fake_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#f2f2f2"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text=" "
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+</FrameLayout>
